@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef } from "react";
 import "./Loader.css";
 import gsap from "gsap";
@@ -67,7 +68,7 @@ function Loader() {
         </div>
         <div class="bar">
           <div class="circle"></div>
-          <p>Loading</p>
+          <p id="loading">Loading</p>
         </div>
       </div>
     </>

@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section#firstPage {
+  position: relative;
+  /* z-index: 1; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+div#firstCursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  background-color: #cadcfc;
+  width: 170px;
+  height: 170px;
+  font-size: 1.4vw;
+  border-radius: 45%;
+  cursor: pointer;
+  color: #00246b;
+  font-style: italic;
+}
+nav#firstNavigation {
+  position: fixed;
+  top: 4vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5vh 2.6vw;
+  font-size: 1.25vw;
+  width: 100%;
+  color: white;
+}
+nav#firstNavigation > :nth-child(1n) {
+  cursor: pointer;
+}
+div#firstRightNavigation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+div#firstRightNavigation > div#emptyspace {
+  position: absolute;
+  border-top: 1px solid white;
+  width: 0%;
+  transform: translate(0%, 2500%);
+  transition: all 0.2s cubic-bezier(0.43, 0.195, 0.02, 1);
+}
+div#firstRightNavigation:hover > div#firstemptyspace {
+  width: 100%;
+}
+video {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+div#firstCenterTextContainer {
+  position: relative;
+  bottom: 15vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  height: 34vh;
+  /* overflow: hidden; */
+}
+
+span#firstCenterText {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33vh;
+  width: 100%;
+  /* flex-grow: 10; */
+  /* overflow-y: hidden; */
+  font-size: 15vw;
+  color: #cadcfc;
+}
+span#firstCenterText span {
+  opacity: 0.1;
+  height: auto;
+  transform: all 0.3s;
+}
+
+div.underline {
+  position: absolute;
+  /* z-index: 2; */
+  top: 100%;
+  left: 50%;
+  width: 0;
+  opacity: 0;
+  border: 2px solid white;
+  box-shadow: 0px 5px 10px 5px #00246b;
+  transform: translate(-50%, 50%);
+}
